@@ -5,7 +5,7 @@ import { Add, CalendarEdit, DirectNotification, SearchNormal1 } from 'iconsax-re
 
 function Navbar() {
     return (
-        <div className='h-10'>
+        <div>
 
             <div className='flex p-4 md:p-6 justify-between items-center'>
                 {/* profile/left section */}
