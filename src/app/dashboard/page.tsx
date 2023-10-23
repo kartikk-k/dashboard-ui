@@ -1,3 +1,4 @@
+import StatusTracker from '@/components/Cards/StatusTracker'
 import TimeTracker from '@/components/Cards/TimeTracker'
 import TraningAnalysis from '@/components/Cards/TraningAnalysis'
 import Navbar from '@/components/Navbar'
@@ -19,6 +20,10 @@ function Dashboard() {
 
                     <div className='break-inside-avoid-column'>
                         <TimeTracker />
+                    </div>
+
+                    <div className='break-inside-avoid-column'>
+                        <StatusTracker />
                     </div>
                 </div>
 

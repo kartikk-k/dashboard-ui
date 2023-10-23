@@ -10,7 +10,10 @@ const config: Config = {
     extend: {
       colors: {
         'primary': '#7B6CF0'
-      }
+      },
+      fontSize: {
+        'xxs': '.625rem', // 10px
+      },
     },
   },
   plugins: [],
