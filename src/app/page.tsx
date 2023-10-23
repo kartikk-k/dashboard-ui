@@ -1,8 +1,11 @@
+import Link from 'next/link'
 import React from 'react'
 
 function Home() {
   return (
-    <div>Home</div>
+    <div className='p-4'>
+      <Link href="/dashboard">Dashboard</Link>
+    </div>
   )
 }
 

@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* to center align content from both sides */
+.all-center {
+	@apply flex items-center justify-center;
+}
+
+.primary-gradient {
+	@apply bg-gradient-to-br from-violet-500 to-violet-400;
+}

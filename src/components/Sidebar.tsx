@@ -4,12 +4,12 @@ import ProfileImage from '../components/assets/profile.png'
 
 function Sidebar() {
     return (
-        <div className='w-60 h-screen relative overflow-hidden'>
+        <div className='w-60 shrink-0 hidden md:block h-screen relative overflow-hidden'>
             <div className='w-full h-full border-r'>
                 {/* logo */}
-                <div className='p-6 flex cursor-pointer items-center gap-2'>
+                <div className='p-6 flex cursor-pointer group items-center gap-2'>
                     <div className='h-10 outline outline-violet-300 w-10 flex items-center bg-gradient-to-br justify-center rounded-full from-violet-500 to-violet-400 text-white'>
-                        <Triangle size={24} />
+                        <Triangle size={24} className='relative group-hover:scale-75 duration-200' />
                     </div>
                     <div>
                         <h1 className='text-sm font-bold text-gray-800'>Githr</h1>
