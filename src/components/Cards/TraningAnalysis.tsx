@@ -4,10 +4,11 @@ import Avatar1 from '../assets/avatars/avatar1.png'
 import Avatar2 from '../assets/avatars/avatar2.png'
 import Avatar3 from '../assets/avatars/avatar3.png'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 function TraningAnalysis() {
     return (
-        <div className='border text-gray-500 w-full sm:w-80 p-3 rounded-2xl'>
+        <div className='border text-gray-500 w-full  p-3 rounded-2xl'>
             {/* header */}
             <div className='flex items-center justify-between'>
                 <div className='flex items-center text-sm gap-2'>
@@ -30,24 +31,24 @@ function TraningAnalysis() {
                     </div>
                     {/* attendes */}
                     <div className='flex items-center gap-1'>
-                        <div className='flex gap-[-4px]'>
-                            <Image src={Avatar1} alt='user1' height={20} width={20} className='outline outline-white rounded-full' />
-                            <Image src={Avatar2} alt='user2' height={20} width={20} className='outline outline-white rounded-full' />
-                            <Image src={Avatar3} alt='user3' height={20} width={20} className='outline outline-white rounded-full' />
+                        <div className='flex group'>
+                            <Image src={Avatar1} alt='user1' height={20} width={20} className='outline outline-white rounded-full -ml-0.5 group-hover:ml-0 duration-200' />
+                            <Image src={Avatar2} alt='user2' height={20} width={20} className='outline outline-white rounded-full -ml-0.5 group-hover:ml-0 duration-200' />
+                            <Image src={Avatar3} alt='user3' height={20} width={20} className='outline outline-white rounded-full -ml-0.5 group-hover:ml-0 duration-200' />
                         </div>
-                        <p className='text-xs'>26 Attended</p>
+                        <p className='text-xxs'>26 Attended</p>
                     </div>
                 </div>
 
                 {/* graph */}
-                <div className='flex gap-1.5 items-end'>
-                    <div className='w-3 h-14 rounded-sm duration-200 bg-violet-300' />
-                    <div className='w-3 h-16 rounded-sm duration-200 bg-violet-500' />
-                    <div className='w-3 h-12 rounded-sm duration-200 bg-violet-300' />
-                    <div className='w-3 h-16 rounded-sm duration-200 bg-violet-500' />
-                    <div className='w-3 h-14 rounded-sm duration-200 bg-violet-300' />
-                    <div className='w-3 h-20 rounded-sm duration-200 bg-violet-500' />
-                    <div className='w-3 h-12 rounded-sm duration-200 bg-violet-300' />
+                <div className='flex gap-1.5 items-end h-20'>
+                    <motion.div initial={{ height: 0 }} animate={{ height: '' }} transition={{ duration: 0.2 }} className='w-3 h-14 rounded-sm duration-200 bg-violet-300' />
+                    <motion.div initial={{ height: 0 }} animate={{ height: '' }} transition={{ duration: 0.2 + 0.2 }} className='w-3 h-16 rounded-sm duration-200 bg-violet-500' />
+                    <motion.div initial={{ height: 0 }} animate={{ height: '' }} transition={{ duration: 0.2 + 0.4 }} className='w-3 h-12 rounded-sm duration-200 bg-violet-300' />
+                    <motion.div initial={{ height: 0 }} animate={{ height: '' }} transition={{ duration: 0.2 + 0.6 }} className='w-3 h-16 rounded-sm duration-200 bg-violet-500' />
+                    <motion.div initial={{ height: 0 }} animate={{ height: '' }} transition={{ duration: 0.2 + 0.8 }} className='w-3 h-14 rounded-sm duration-200 bg-violet-300' />
+                    <motion.div initial={{ height: 0 }} animate={{ height: '' }} transition={{ duration: 0.2 + 0.11 }} className='w-3 h-20 rounded-sm duration-200 bg-violet-500' />
+                    <motion.div initial={{ height: 0 }} animate={{ height: '' }} transition={{ duration: 0.2 + 0.13 }} className='w-3 h-12 rounded-sm duration-200 bg-violet-300' />
                 </div>
             </div>
         </div>

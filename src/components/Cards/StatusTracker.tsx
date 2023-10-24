@@ -6,7 +6,7 @@ import Avatar3 from '../assets/avatars/avatar3.png'
 
 function StatusTracker() {
     return (
-        <div className='border text-gray-500 w-full sm:w-80 p-3 rounded-2xl'>
+        <div className='border text-gray-500 w-full p-3 rounded-2xl'>
             {/* header */}
             <div className='flex items-center justify-between'>
                 <div className='flex items-center text-sm gap-2'>
