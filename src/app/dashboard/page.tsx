@@ -1,6 +1,7 @@
 "use client"
 
 import CourseProgress from '@/components/Cards/CourseProgress'
+import EmployeeSpotlight from '@/components/Cards/EmployeeSpotlight'
 import StatusTracker from '@/components/Cards/StatusTracker'
 import TimeTracker from '@/components/Cards/TimeTracker'
 import TraningAnalysis from '@/components/Cards/TraningAnalysis'
@@ -26,6 +27,8 @@ function Dashboard() {
                         <TraningAnalysis />
 
                         <CourseProgress />
+
+                        <EmployeeSpotlight />
                     </div>
 
                     <div className='break-inside-avoid-column'>

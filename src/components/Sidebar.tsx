@@ -4,7 +4,7 @@ import ProfileImage from '../components/assets/profile.png'
 
 function Sidebar() {
     return (
-        <div className='w-60 shrink-0 hidden md:block h-screen relative overflow-hidden'>
+        <div className='w-60 shrink-0 hidden md:block h-screen sticky top-0 overflow-hidden'>
             <div className='w-full h-full border-r'>
                 {/* logo */}
                 <div className='p-6 flex cursor-pointer group items-center gap-2'>
