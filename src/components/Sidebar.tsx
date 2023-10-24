@@ -3,11 +3,12 @@ import { ArrowRight2, Calendar, Document, Element3, Folder2, Headphone, Profile2
 import ProfileImage from '../components/assets/profile.png'
 
 function Sidebar() {
+
     return (
-        <div className='w-60 shrink-0 hidden md:block h-screen sticky top-0 overflow-hidden'>
-            <div className='w-full h-full border-r'>
+        <div className='w-60 shrink-0 md:block h-screen sticky top-0 overflow-hidden'>
+            <div className='w-full h-full bg-white border-r'>
                 {/* logo */}
-                <div className='p-6 flex cursor-pointer group items-center gap-2'>
+                <div className='p-4 md:p-6 flex cursor-pointer group items-center gap-2'>
                     <div className='h-10 outline outline-violet-300 w-10 flex items-center bg-gradient-to-br justify-center rounded-full from-violet-500 to-violet-400 text-white'>
                         <Triangle size={24} className='relative group-hover:scale-75 duration-200' />
                     </div>
@@ -23,7 +24,7 @@ function Sidebar() {
                 {/* other section */}
                 <div className='flex flex-col h-full justify-between'>
                     {/* top */}
-                    <div className='pt-6 text-gray-500 font-medium space-y-2 px-2 text-xs'>
+                    <div className='pt-6 text-gray-500 font-medium space-y-2 md:px-2 text-xs'>
                         <button className='flex hover:px-8 duration-200 text-violet-600 rounded-md w-full py-2 px-6 items-center gap-2'>
                             <Element3 variant='Outline' size={16} />
                             Dashboard
@@ -66,7 +67,7 @@ function Sidebar() {
                     </div>
 
                     <div>
-                        <div className='text-gray-500 text-xs font-medium px-2'>
+                        <div className='text-gray-500 text-xs font-medium md:px-2'>
                             <button className='flex hover:px-8 duration-200 px-6 py-2 items-center gap-2'>
                                 <Setting2 size={16} />
                                 Settings
@@ -81,7 +82,7 @@ function Sidebar() {
                         <hr className='bg-gray-400 mx-2 my-4' />
 
                         {/* bottom */}
-                        <div className='flex pb-28 justify-between px-6 items-center cursor-pointer hover:pr-5 duration-200'>
+                        <div className='flex pb-28 justify-between px-4 md:px-6 items-center cursor-pointer hover:pr-5 duration-200'>
                             <div className='flex items-center gap-2'>
                                 <Image
                                     src={ProfileImage}

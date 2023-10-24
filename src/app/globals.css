@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 /* to center align content from both sides */
 .all-center {
 	@apply flex items-center justify-center;
@@ -10,3 +11,18 @@
 .primary-gradient {
 	@apply bg-gradient-to-br from-violet-500 to-violet-400;
 }
+
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+	@apply bg-gray-100;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	@apply bg-gray-300 hover:bg-gray-400;
+  }

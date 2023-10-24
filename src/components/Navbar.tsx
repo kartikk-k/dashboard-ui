@@ -1,9 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
 import ProfileImage from '../components/assets/profile.png'
-import { Add, CalendarEdit, DirectNotification, SearchNormal1 } from 'iconsax-react'
+import { Add, CalendarEdit, DirectNotification, SearchNormal1, SidebarLeft } from 'iconsax-react'
 
-function Navbar() {
+function Navbar({ isOpen, sidebarChange }: { isOpen: boolean, sidebarChange: (value: boolean) => void }) {
     return (
         <div>
 
@@ -23,8 +23,12 @@ function Navbar() {
                     </div>
                 </div>
 
+                <button onClick={() => sidebarChange(!isOpen)} className='all-center text-gray-500 h-8 w-8 md:hidden'>
+                    <SidebarLeft size={16} />
+                </button>
+
                 {/* right section */}
-                <div className='text-gray-500 flex gap-2'>
+                <div className='text-gray-500 hidden md:flex gap-2'>
                     <button className='all-center h-8 w-8 duration-200 hover:bg-gray-100 rounded-lg'>
                         <SearchNormal1 size={16} />
                     </button>

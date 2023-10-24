@@ -58,7 +58,7 @@ function StatusTracker() {
                                 </div>
                             </div>
                         </div>
-                        <div className='flex text-xxs font-medium items-center gap-1 pr-1.5 bg-orange-100 p-1 rounded-full text-orange-400'>
+                        <div className='flex text-xxs font-medium items-center gap-1 pr-1.5 bg-orange-100 px-1 py-0.5 rounded-full text-orange-400'>
                             <Clock size={14} variant='Bold' />
                             <span>25m</span>
                         </div>
@@ -74,7 +74,7 @@ function StatusTracker() {
                                 </div>
                             </div>
                         </div>
-                        <div className='flex text-xxs font-medium items-center gap-1 pr-1.5 bg-orange-100 p-1 rounded-full text-orange-400'>
+                        <div className='flex text-xxs font-medium items-center gap-1 pr-1.5 bg-orange-100 px-1 py-0.5 rounded-full text-orange-400'>
                             <Clock size={14} variant='Bold' />
                             <span>12m</span>
                         </div>
