@@ -2,6 +2,7 @@
 
 import CourseProgress from '@/components/Cards/CourseProgress'
 import EmployeeSpotlight from '@/components/Cards/EmployeeSpotlight'
+import Notes from '@/components/Cards/Notes'
 import StatusTracker from '@/components/Cards/StatusTracker'
 import TimeTracker from '@/components/Cards/TimeTracker'
 import TraningAnalysis from '@/components/Cards/TraningAnalysis'
@@ -31,8 +32,10 @@ function Dashboard() {
                         <EmployeeSpotlight />
                     </div>
 
-                    <div className='break-inside-avoid-column'>
+                    <div className='break-inside-avoid-column space-y-4'>
                         <TimeTracker />
+
+                        <Notes />
                     </div>
 
                     <div className='break-inside-avoid-column'>
