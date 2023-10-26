@@ -1,6 +1,6 @@
 ### Live Demo
 
-[Githr Dashboard - Vercel](https://dashboard-ui-tau-sepia.vercel.app/)
+[Githr Dashboard - Vercel](https://githr.vercel.app/)
 
 ### Preview
 
