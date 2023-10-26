@@ -27,16 +27,16 @@ function Home() {
     >
 
       {/* backdrop */}
-      {/* <AnimatePresence>
-        {isSidebarOpen && ( */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        onClick={() => setIsSidebarOpen(false)}
-        className='bg-black/60 absolute top-0 left-0 md:hidden w-full h-screen z-20'
-      />
-      {/* )}
-      </AnimatePresence> */}
+      <AnimatePresence>
+        {isSidebarOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            onClick={() => setIsSidebarOpen(false)}
+            className='bg-black/60 absolute top-0 left-0 md:hidden w-full h-screen z-20'
+          />
+        )}
+      </AnimatePresence>
 
       {/* mobile sidebar */}
       <AnimatePresence>
