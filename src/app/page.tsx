@@ -12,6 +12,7 @@ import Sidebar from '@/components/Sidebar'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useState } from 'react'
 
+
 function Home() {
 
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
@@ -21,22 +22,21 @@ function Home() {
   }
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}
+    <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
       className={`${isSidebarOpen ? 'overflow-hidden' : ''} h-screen`}
     >
 
       {/* backdrop */}
-      <AnimatePresence>
-        {isSidebarOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={() => setIsSidebarOpen(false)}
-            className='bg-black/60 absolute top-0 left-0 md:hidden w-full h-screen z-20'
-          />
-        )}
-      </AnimatePresence>
+      {/* <AnimatePresence>
+        {isSidebarOpen && ( */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        onClick={() => setIsSidebarOpen(false)}
+        className='bg-black/60 absolute top-0 left-0 md:hidden w-full h-screen z-20'
+      />
+      {/* )}
+      </AnimatePresence> */}
 
       {/* mobile sidebar */}
       <AnimatePresence>
@@ -45,7 +45,7 @@ function Home() {
             initial={{ x: "-100%" }}
             animate={{ x: 0 }}
             exit={{ x: "-100%" }}
-            transition={{ bounce: 0.2, type: "spring" }}
+            transition={{ duration: 0.3, type: 'spring', bounce: 0.25 }}
             className='absolute md:hidden z-30 top-0 left-0'
           >
             <Sidebar />

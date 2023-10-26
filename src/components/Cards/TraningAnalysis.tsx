@@ -42,13 +42,13 @@ function TraningAnalysis() {
 
                 {/* graph */}
                 <div className='flex gap-1.5 items-end h-20'>
-                    <motion.div initial={{ height: 0 }} animate={{ height: '' }} transition={{ duration: 0.2 }} className='w-3 h-14 rounded-sm duration-200 bg-violet-300' />
-                    <motion.div initial={{ height: 0 }} animate={{ height: '' }} transition={{ duration: 0.2 + 0.2 }} className='w-3 h-16 rounded-sm duration-200 bg-violet-500' />
-                    <motion.div initial={{ height: 0 }} animate={{ height: '' }} transition={{ duration: 0.2 + 0.4 }} className='w-3 h-12 rounded-sm duration-200 bg-violet-300' />
-                    <motion.div initial={{ height: 0 }} animate={{ height: '' }} transition={{ duration: 0.2 + 0.6 }} className='w-3 h-16 rounded-sm duration-200 bg-violet-500' />
-                    <motion.div initial={{ height: 0 }} animate={{ height: '' }} transition={{ duration: 0.2 + 0.8 }} className='w-3 h-14 rounded-sm duration-200 bg-violet-300' />
-                    <motion.div initial={{ height: 0 }} animate={{ height: '' }} transition={{ duration: 0.2 + 0.11 }} className='w-3 h-20 rounded-sm duration-200 bg-violet-500' />
-                    <motion.div initial={{ height: 0 }} animate={{ height: '' }} transition={{ duration: 0.2 + 0.13 }} className='w-3 h-12 rounded-sm duration-200 bg-violet-300' />
+                    <motion.div initial={{ height: 0 }} animate={{ height: '' }} transition={{ duration: 0.2 }} className='w-3 h-14 rounded-sm duration-200 bg-primary/60' />
+                    <motion.div initial={{ height: 0 }} animate={{ height: '' }} transition={{ duration: 0.2 + 0.2 }} className='w-3 h-16 rounded-sm duration-200 bg-primary' />
+                    <motion.div initial={{ height: 0 }} animate={{ height: '' }} transition={{ duration: 0.2 + 0.4 }} className='w-3 h-12 rounded-sm duration-200 bg-primary/60' />
+                    <motion.div initial={{ height: 0 }} animate={{ height: '' }} transition={{ duration: 0.2 + 0.6 }} className='w-3 h-16 rounded-sm duration-200 bg-primary' />
+                    <motion.div initial={{ height: 0 }} animate={{ height: '' }} transition={{ duration: 0.2 + 0.8 }} className='w-3 h-14 rounded-sm duration-200 bg-primary/60' />
+                    <motion.div initial={{ height: 0 }} animate={{ height: '' }} transition={{ duration: 0.2 + 0.11 }} className='w-3 h-20 rounded-sm duration-200 bg-primary' />
+                    <motion.div initial={{ height: 0 }} animate={{ height: '' }} transition={{ duration: 0.2 + 0.13 }} className='w-3 h-12 rounded-sm duration-200 bg-primary/60' />
                 </div>
             </div>
         </div>
