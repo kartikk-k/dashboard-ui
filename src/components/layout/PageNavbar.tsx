@@ -15,6 +15,8 @@ const PageNavbarLeftContent = React.forwardRef<
         {...props} />
 );
 
+PageNavbarLeftContent.displayName = 'PageNavbarLeftContent'
+
 
 const PageNavbarRightContent = React.forwardRef<
     HTMLDivElement,
@@ -25,6 +27,8 @@ const PageNavbarRightContent = React.forwardRef<
         className='text-gray-500 hidden md:flex gap-2'
         {...props} />
 );
+
+PageNavbarRightContent.displayName = 'PageNavbarRightContent'
 
 
 const PageNavbarIconButton = React.forwardRef<
@@ -37,6 +41,8 @@ const PageNavbarIconButton = React.forwardRef<
             {...props} />
     )
 
+PageNavbarIconButton.displayName = 'PageNavbarIconButton'
+
 const PageNavbarPrimaryButton = React.forwardRef<
     HTMLButtonElement,
     React.ComponentPropsWithoutRef<'button'>>
@@ -47,6 +53,8 @@ const PageNavbarPrimaryButton = React.forwardRef<
             {...props}
         />
     )
+PageNavbarPrimaryButton.displayName = 'PageNavbarPrimaryButton'
+
 
 function PageNavbar({ children }: { children: React.ReactNode }) {
 
