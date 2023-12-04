@@ -18,7 +18,7 @@ function Teams() {
                     </div>
                     <div>
                         <h1 className='text-sm font-semibold text-gray-800'>Teams</h1>
-                        <p className='text-xs font-medium'>Manage and collaborate within your organization's teams</p>
+                        <p className='text-xs font-medium'>Manage and collaborate within your organization&apos;s teams</p>
                     </div>
                 </PageNavbarLeftContent>
 
