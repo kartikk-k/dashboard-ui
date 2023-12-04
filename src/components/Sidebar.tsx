@@ -1,12 +1,22 @@
+"use client"
+
 import Image from 'next/image'
 import { ArrowRight2, Calendar, Document, Element3, Folder2, Headphone, Profile2User, Setting2, Setting4, Star, Timer1, Triangle } from 'iconsax-react'
 import ProfileImage from '../components/assets/profile.png'
-import { useCentralStore } from '@/Store'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { useCentralStore } from '@/Store'
+import { useEffect } from 'react'
+
 
 function Sidebar() {
 
-    const { activePage } = useCentralStore()
+    const pathname = usePathname()
+    const { setIsSidebarOpen, isSidebarOpen } = useCentralStore()
+
+    // useEffect(() => {
+    //     if (!isSidebarOpen) setIsSidebarOpen(!isSidebarOpen)
+    // }, [pathname])
 
     return (
         <div className='w-60 shrink-0 md:block h-screen sticky top-0 overflow-hidden'>
@@ -29,42 +39,42 @@ function Sidebar() {
                 <div className='flex flex-col h-full justify-between'>
                     {/* top */}
                     <div className='pt-6 text-gray-500 font-medium space-y-2 md:px-2 text-xs'>
-                        <Link href={'/'} className={`flex ${activePage === 'DASHBOARD' ? 'text-primary' : ''} hover:px-8 duration-200 rounded-md w-full py-2 px-6 items-center gap-2`}>
+                        <Link href={'/'} className={`flex ${pathname === '/' ? 'text-primary' : ''} hover:px-8 duration-200 rounded-md w-full py-2 px-6 items-center gap-2`}>
                             <Element3 variant='Outline' size={16} />
                             Dashboard
                         </Link>
 
-                        <button className={`flex ${activePage === 'CALENDAR' ? 'text-primary' : ''} hover:px-8 duration-200 px-6 py-2 items-center gap-2`}>
+                        <button className={`flex ${pathname === '/app/calendar' ? 'text-primary' : ''} hover:px-8 duration-200 px-6 py-2 items-center gap-2`}>
                             <Calendar size={16} />
                             Calendar
                         </button>
 
-                        <button className={`flex ${activePage === 'TIMEOFF' ? 'text-primary' : ''} hover:px-8 duration-200 px-6 py-2 items-center gap-2`}>
+                        <button className={`flex ${pathname === '/app/timeoff' ? 'text-primary' : ''} hover:px-8 duration-200 px-6 py-2 items-center gap-2`}>
                             <Timer1 size={16} />
                             Time Off
                         </button>
 
-                        <button className={`flex ${activePage === 'PROJECTS' ? 'text-primary' : ''} hover:px-8 duration-200 px-6 py-2 items-center gap-2`}>
+                        <button className={`flex ${pathname === '/app/projects' ? 'text-primary' : ''} hover:px-8 duration-200 px-6 py-2 items-center gap-2`}>
                             <Folder2 size={16} />
                             Projects
                         </button>
 
-                        <button className={`flex ${activePage === 'TEAMS' ? 'text-primary' : ''} hover:px-8 duration-200 px-6 py-2 items-center gap-2`}>
+                        <Link href={'/app/teams'} className={`flex ${pathname === '/app/teams' ? 'text-primary' : ''} hover:px-8 duration-200 px-6 py-2 items-center gap-2`}>
                             <Profile2User size={16} />
                             Teams
-                        </button>
+                        </Link>
 
-                        <Link href={'/app/integrations'} className={`flex ${activePage === 'INTEGRATIONS' ? 'text-primary' : ''} hover:px-8 duration-200 px-6 py-2 items-center gap-2`}>
+                        <Link href={'/app/integrations'} className={`flex ${pathname === '/app/integrations' ? 'text-primary' : ''} hover:px-8 duration-200 px-6 py-2 items-center gap-2`}>
                             <Setting4 size={16} />
                             Integrations
                         </Link>
 
-                        <button className={`flex ${activePage === 'BENEFITS' ? 'text-primary' : ''} hover:px-8 duration-200 px-6 py-2 items-center gap-2`}>
+                        <button className={`flex ${pathname === '/app/benefits' ? 'text-primary' : ''} hover:px-8 duration-200 px-6 py-2 items-center gap-2`}>
                             <Star size={16} />
                             Benefits
                         </button>
 
-                        <button className={`flex ${activePage === 'DOCUMENTS' ? 'text-primary' : ''} hover:px-8 duration-200 px-6 py-2 items-center gap-2`}>
+                        <button className={`flex ${pathname === '/app/documents' ? 'text-primary' : ''} hover:px-8 duration-200 px-6 py-2 items-center gap-2`}>
                             <Document size={16} />
                             Documents
                         </button>
@@ -72,12 +82,12 @@ function Sidebar() {
 
                     <div>
                         <div className='text-gray-500 text-xs font-medium md:px-2'>
-                            <button className={`flex ${activePage === 'SETTINGS' ? 'text-primary' : ''} hover:px-8 duration-200 px-6 py-2 items-center gap-2`}>
+                            <button className={`flex ${pathname === '/app/settings' ? 'text-primary' : ''} hover:px-8 duration-200 px-6 py-2 items-center gap-2`}>
                                 <Setting2 size={16} />
                                 Settings
                             </button>
 
-                            <button className={`flex ${activePage === 'SUPPORT' ? 'text-primary' : ''} hover:px-8 duration-200 px-6 py-2 items-center gap-2`}>
+                            <button className={`flex ${pathname === '/app/support' ? 'text-primary' : ''} hover:px-8 duration-200 px-6 py-2 items-center gap-2`}>
                                 <Headphone size={16} />
                                 Support
                             </button>

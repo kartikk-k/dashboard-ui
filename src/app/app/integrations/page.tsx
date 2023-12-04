@@ -1,25 +1,12 @@
 "use client"
 
-import React, { useEffect } from 'react'
-import { useCentralStore } from '@/Store'
 import PageNavbar, { PageNavbarIconButton, PageNavbarLeftContent, PageNavbarPrimaryButton, PageNavbarRightContent } from '@/components/layout/PageNavbar'
-import { Add, Notification, SearchNormal1, Setting2, Setting4 } from 'iconsax-react'
+import { Add, Notification, SearchNormal1, Setting4 } from 'iconsax-react'
 import PageContent from '@/components/layout/PageContent'
 import Tabs from '@/components/Cards/ui/tabs'
-import Image from 'next/image'
-import ToggleSwitch from '@/components/Cards/ui/ToggleSwitch'
-import MSOfficeLogo from '@/components/assets/logos/msoffice.svg'
-import ZoomLogo from '@/components/assets/logos/zoom.svg'
-import SlackLogo from '@/components/assets/logos/slack.svg'
 import IntegrationsList from '@/components/integrations/IntegrationsList'
 
 function Integrations() {
-
-    const { setActivePage } = useCentralStore()
-
-    useEffect(() => {
-        setActivePage('INTEGRATIONS')
-    }, [])
 
     return (
         <div>

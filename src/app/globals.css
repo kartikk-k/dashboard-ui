@@ -26,3 +26,25 @@
   ::-webkit-scrollbar-thumb {
 	@apply bg-gray-300 hover:bg-gray-400;
   }
+
+
+  ::-webkit-scrollbar {
+    @apply h-1 w-1;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    /* background: #f1f1f1;  */
+    @apply bg-gray-200 rounded-md;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 rounded-md hover:bg-gray-400;
+  }
+
+
+/* 
+  *{
+    @apply bg-red-500/20 border border-red-500;
+  } */

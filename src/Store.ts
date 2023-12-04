@@ -9,6 +9,7 @@ interface centralStore {
 
     isSidebarOpen: boolean
     toggleSidebar: () => void
+    setIsSidebarOpen: (isOpen: boolean) => void
 }
 
 export const useCentralStore = create<centralStore>((set, get) => ({
@@ -17,4 +18,5 @@ export const useCentralStore = create<centralStore>((set, get) => ({
 
     isSidebarOpen: false,
     toggleSidebar: () => set({ isSidebarOpen: !get().isSidebarOpen }),
+    setIsSidebarOpen: (isOpen) => set({ isSidebarOpen: isOpen })
 }))

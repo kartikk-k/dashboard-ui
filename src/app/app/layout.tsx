@@ -7,7 +7,7 @@ import { useCentralStore } from "@/Store"
 
 const AppLayout = ({ children }: { children: React.ReactNode }) => {
 
-    const { isSidebarOpen, toggleSidebar } = useCentralStore()
+    const { isSidebarOpen, toggleSidebar, setIsSidebarOpen } = useCentralStore()
 
     return (
         <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
@@ -20,7 +20,7 @@ const AppLayout = ({ children }: { children: React.ReactNode }) => {
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        onClick={toggleSidebar}
+                        onClick={() => setIsSidebarOpen(false)}
                         className='bg-black/60 absolute top-0 left-0 md:hidden w-full h-screen z-20'
                     />
                 )}
@@ -41,12 +41,12 @@ const AppLayout = ({ children }: { children: React.ReactNode }) => {
                 )}
             </AnimatePresence>
 
-            <div className='flex'>
+            <div className='grid md:grid-cols-[240px_1fr] w-screen overflow-x-hidden'>
                 <div className='hidden md:block'>
                     <Sidebar />
                 </div>
 
-                <div className='w-full max-w-[1440px] mx-auto'>
+                <div className='w-full overflow-x-auto max-w-[1440px] mx-auto'>
                     {children}
                 </div>
             </div>
