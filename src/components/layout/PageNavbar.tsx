@@ -63,7 +63,7 @@ function PageNavbar({ children }: { children: React.ReactNode }) {
     return (
         <div>
 
-            <div className='flex p-4 md:p-6 text-gray-500 justify-between items-center'>
+            <div className='h-[var(--h-nav)] flex p-4 md:p-6 text-gray-500 justify-between items-center'>
 
                 {children}
 
