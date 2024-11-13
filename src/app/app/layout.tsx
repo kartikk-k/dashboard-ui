@@ -46,7 +46,7 @@ const AppLayout = ({ children }: { children: React.ReactNode }) => {
                     <Sidebar />
                 </div>
 
-                <div className='w-full overflow-x-auto max-w-[1440px] mx-auto'>
+                <div className='w-full overflow-x-auto max-w-[1440px] mx-auto '>
                     {children}
                 </div>
             </div>

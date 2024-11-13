@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --h-nav: 90px;
+}
+
 
 /* to center align content from both sides */
 .all-center {
